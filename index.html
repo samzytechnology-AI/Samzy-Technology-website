@@ -2981,6 +2981,23 @@
 
         }
 
+    
+        /* PORTFOLIO IMAGE GALLERY */
+        .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+        .portfolio-grid .project-card { border-radius: 14px; background: #071729; }
+        .portfolio-shot { display:block; position:relative; height:auto; aspect-ratio: 16 / 10; overflow:hidden; background:#0b1728; }
+        .portfolio-shot img { width:100%; height:100%; object-fit:cover; transition:transform .55s ease; }
+        .portfolio-shot:hover img { transform:scale(1.055); }
+        .portfolio-shot::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.30),transparent 42%,rgba(0,0,0,.08)); pointer-events:none; }
+        .portfolio-shot .project-number { position:absolute; z-index:2; top:14px; left:14px; padding:7px 10px; border:1px solid rgba(255,255,255,.22); border-radius:5px; background:rgba(2,9,20,.78); color:#dcecff; font-size:9px; letter-spacing:1px; }
+        .portfolio-grid .project-info { padding:20px; }
+        .portfolio-grid .project-info h3 { font-size:17px; margin-bottom:7px; }
+        .portfolio-grid .project-info span { display:block; line-height:1.6; }
+        .portfolio-grid .project-info a { margin-top:15px; }
+        .portfolio-note { margin:28px auto 0; max-width:800px; text-align:center; color:var(--text-muted); font-size:11px; }
+        @media (max-width: 900px) { .portfolio-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
+        @media (max-width: 560px) { .portfolio-grid { grid-template-columns:1fr; } .portfolio-shot { aspect-ratio:16/10; } }
+
     </style>
 
 </head>
@@ -3084,7 +3101,7 @@
                 </a>
 
                 <a href="#projects">
-                    Projects
+                    Portfolio
                 </a>
 
                 <a href="#testimonials">
@@ -3965,266 +3982,62 @@
         ====================================================== -->
 
         <section class="section projects" id="projects">
-
-            <div class="container">
-
-
-                <div class="center-heading reveal">
-
-                    <div class="section-label">
-                        Our Work
-                    </div>
-
-                    <h2 class="section-title">
-
-                        Selected
-                        <span>Projects.</span>
-
-                    </h2>
-
-                    <p class="section-description">
-
-                        A selection of digital projects created
-                        by SAMZYTECHNOLOGY LIMITED across different
-                        industries and use cases.
-
-                    </p>
-
-                </div>
-
-
-                <div class="projects-grid">
-
-
-                    <!-- APEXCORE -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                PROJECT 01
-                            </div>
-
-                            <div class="project-placeholder">
-
-                                APEXCORE
-                                <br>
-                                CONSULTING
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <h3>
-                                ApexCore Consulting
-                            </h3>
-
-                            <span>
-                                Corporate Website
-                            </span>
-
-                            <a href="#contact">
-
-                                View Project
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- EMBER -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                PROJECT 02
-                            </div>
-
-                            <div class="project-placeholder">
-
-                                EMBER
-                                <br>
-                                & SPICE
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <h3>
-                                Ember & Spice
-                            </h3>
-
-                            <span>
-                                Restaurant Website
-                            </span>
-
-                            <a href="#contact">
-
-                                View Project
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PRIME NEST -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                PROJECT 03
-                            </div>
-
-                            <div class="project-placeholder">
-
-                                PRIME
-                                <br>
-                                NEST
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <h3>
-                                PrimeNest Properties
-                            </h3>
-
-                            <span>
-                                Real Estate Website
-                            </span>
-
-                            <a href="#contact">
-
-                                View Project
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- VELORA -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                PROJECT 04
-                            </div>
-
-                            <div class="project-placeholder">
-
-                                VELORA
-                                <br>
-                                FASHION
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <h3>
-                                VELORA Fashion
-                            </h3>
-
-                            <span>
-                                Fashion Website
-                            </span>
-
-                            <a href="#contact">
-
-                                View Project
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- SAMZY -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                PROJECT 05
-                            </div>
-
-                            <div class="project-placeholder">
-
-                                SAMZY
-                                <br>
-                                TECHNOLOGY
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <h3>
-                                SAMZYTECHNOLOGY LIMITED
-                            </h3>
-
-                            <span>
-                                Technology Website
-                            </span>
-
-                            <a href="#home">
-
-                                Current Website
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
+    <div class="container">
+        <div class="center-heading reveal">
+            <div class="section-label">Our Portfolio</div>
+            <h2 class="section-title">Software <span>Dashboards.</span></h2>
+            <p class="section-description">
+                Explore modern dashboard and web application interface concepts that reflect the digital experiences
+                SAMZYTECHNOLOGY LIMITED can design and develop for ambitious businesses.
+            </p>
+        </div>
+        <div class="projects-grid portfolio-grid">
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://cdn.dribbble.com/userupload/48094830/file/80d4f1ad6048d4cfa5deea69cf1f75b4.png?resize=752x&vertical=center" target="_blank" rel="noopener" aria-label="Open analytics dashboard preview">
+                    <img src="https://cdn.dribbble.com/userupload/48094830/file/80d4f1ad6048d4cfa5deea69cf1f75b4.png?resize=752x&vertical=center" alt="Dark analytics dashboard with revenue charts and KPI cards" loading="lazy">
+                    <span class="project-number">01 / ANALYTICS</span>
+                </a>
+                <div class="project-info"><h3>Business Analytics Dashboard</h3><span>Data visualisation · KPI tracking</span><a href="https://dribbble.com/shots/27479829-AI-Powered-Analytics-Dashboard-Business-Intelligence-Growth" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://cdn.dribbble.com/userupload/20264663/file/original-bdf533b17e72d48b61522fa355b821b3.jpeg?crop=0x0-1920x1440&resize=1600x1200" target="_blank" rel="noopener" aria-label="Open sales dashboard preview">
+                    <img src="https://cdn.dribbble.com/userupload/20264663/file/original-bdf533b17e72d48b61522fa355b821b3.jpeg?crop=0x0-1920x1440&resize=1600x1200" alt="Modern sales dashboard with sales charts and product table" loading="lazy">
+                    <span class="project-number">02 / SALES</span>
+                </a>
+                <div class="project-info"><h3>Sales & Commerce Dashboard</h3><span>Sales insights · Product performance</span><a href="https://dribbble.com/shots/25566063-Cerebro-Dashboard-Sales" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://cdn.dribbble.com/userupload/45718384/file/e7734e55af9338fc93411a286bbf6f81.jpg?resize=752x&vertical=center" target="_blank" rel="noopener" aria-label="Open finance dashboard preview">
+                    <img src="https://cdn.dribbble.com/userupload/45718384/file/e7734e55af9338fc93411a286bbf6f81.jpg?resize=752x&vertical=center" alt="Dark finance dashboard with revenue forecasts and financial metrics" loading="lazy">
+                    <span class="project-number">03 / FINANCE</span>
+                </a>
+                <div class="project-info"><h3>Finance Management Platform</h3><span>Revenue · Forecasting · Reporting</span><a href="https://dribbble.com/shots/26777082-SaaS-Finance-Management-Dashboard-UI-UX-Radiyal" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://cdn.dribbble.com/userupload/45878659/file/d03cfd5215679bcf0471abdfe250e987.png?resize=2048x1536&vertical=center" target="_blank" rel="noopener" aria-label="Open admin dashboard preview">
+                    <img src="https://cdn.dribbble.com/userupload/45878659/file/d03cfd5215679bcf0471abdfe250e987.png?resize=2048x1536&vertical=center" alt="Responsive admin dashboard with customer and transaction analytics" loading="lazy">
+                    <span class="project-number">04 / ADMIN</span>
+                </a>
+                <div class="project-info"><h3>Enterprise Admin Dashboard</h3><span>Operations · Customers · Reporting</span><a href="https://dribbble.com/shots/26828143-Responsive-Admin-Dashboard-UI" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://cdn.dribbble.com/userupload/47255248/file/12dd265354cfc48f2a64491355184af7.jpg?resize=%7Bwidth%7Dx%7Bheight%7D&vertical=center" target="_blank" rel="noopener" aria-label="Open AI dashboard preview">
+                    <img src="https://cdn.dribbble.com/userupload/47255248/file/12dd265354cfc48f2a64491355184af7.jpg?resize=%7Bwidth%7Dx%7Bheight%7D&vertical=center" alt="AI data analytics dashboard with recommendations and traffic charts" loading="lazy">
+                    <span class="project-number">05 / ARTIFICIAL INTELLIGENCE</span>
+                </a>
+                <div class="project-info"><h3>AI Insights Dashboard</h3><span>AI recommendations · Data intelligence</span><a href="https://dribbble.com/shots/27240877-AI-Data-Analytics-SaaS-Dashboard" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+            <article class="project-card reveal">
+                <a class="portfolio-shot" href="https://panelify.co/assets/images/screenshots/hero-dashboard-dark.jpg" target="_blank" rel="noopener" aria-label="Open SaaS dashboard preview">
+                    <img src="https://panelify.co/assets/images/screenshots/hero-dashboard-dark.jpg" alt="SaaS dashboard with user analytics, revenue and charts" loading="lazy">
+                    <span class="project-number">06 / SAAS</span>
+                </a>
+                <div class="project-info"><h3>SaaS Operations Dashboard</h3><span>Subscriptions · User activity · Growth</span><a href="https://panelify.co/" target="_blank" rel="noopener">View design inspiration <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </article>
+        </div>
+        <p class="portfolio-note">Visual references are credited to their original designers and sources. They are design inspiration, not representations of completed client deployments.</p>
+    </div>
+</section>
 
 
 
@@ -5155,7 +4968,7 @@
 
                         <li>
                             <a href="#projects">
-                                Projects
+                                Portfolio
                             </a>
                         </li>
 
