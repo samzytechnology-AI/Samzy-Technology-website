@@ -600,13 +600,13 @@
             position: relative;
             overflow: hidden;
             isolation: isolate;
-            padding: 38px 0 44px;
+            padding: 30px 0 34px;
             background-color: #020914;
             background-image:
-                linear-gradient(90deg, rgba(2,8,20,.42) 0%, rgba(3,15,34,.24) 55%, rgba(3,14,31,.12) 100%),
+                linear-gradient(90deg, rgba(2,8,20,.62) 0%, rgba(3,15,34,.42) 58%, rgba(3,14,31,.22) 100%),
                 url("./samzy-building.jpg");
-            background-position: center;
-            background-size: contain;
+            background-position: center center;
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
@@ -678,16 +678,20 @@
             width: 100%;
         }
 
-        .hero-ceo,
-        .hero-stats {
+        .hero-ceo {
             display: none;
         }
 
         .hero-content {
-            max-width: 760px;
+            max-width: 780px;
             padding: 0;
             background: transparent;
             backdrop-filter: none;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
         /* =====================================================
@@ -2921,9 +2925,9 @@
         @media (max-width: 700px) {
             .hero {
                 min-height: calc(100svh - 112px);
-                padding: 28px 0 34px;
-                background-size: contain;
-                background-position: center;
+                padding: 24px 0 28px;
+                background-size: cover;
+                background-position: center center;
             }
             .hero-content {
                 max-width: 100%;
@@ -2953,11 +2957,28 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
-                margin-bottom: 0;
+                margin-bottom: 22px;
             }
             .hero-buttons .btn {
                 padding: 11px 15px;
                 font-size: 12px;
+            }
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                max-width: 360px;
+            }
+            .hero-stat {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            .hero-stat strong {
+                font-size: 18px;
+            }
+            .hero-stat span {
+                font-size: 10px;
             }
         }
 
