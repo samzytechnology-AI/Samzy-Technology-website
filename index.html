@@ -603,7 +603,7 @@
             padding: 30px 0 34px;
             background-color: #020914;
             background-image:
-                linear-gradient(90deg, rgba(2,8,20,.62) 0%, rgba(3,15,34,.42) 58%, rgba(3,14,31,.22) 100%),
+                linear-gradient(90deg, rgba(2,8,20,.20) 0%, rgba(3,15,34,.10) 58%, rgba(3,14,31,.06) 100%),
                 url("./samzy-building.jpg");
             background-position: center center;
             background-size: cover;
@@ -683,6 +683,31 @@
         }
 
         .hero-content {
+            width: 100%;
+            max-width: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background: transparent;
+            backdrop-filter: none;
+        }
+
+        .hero-eyebrow {
+            margin: 0;
+            padding: 10px 16px;
+            border: 1px solid rgba(255,255,255,.55);
+            border-radius: 2px;
+            background: rgba(2,8,20,.16);
+            color: #fff;
+            font-size: clamp(11px, 1.2vw, 14px);
+            font-weight: 700;
+            letter-spacing: .18em;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+
             max-width: 780px;
             padding: 0;
             background: transparent;
@@ -2927,6 +2952,9 @@
                 min-height: calc(100svh - 112px);
                 padding: 24px 0 28px;
                 /* Keep the complete building photograph visible on mobile; do not crop either side. */
+                background-image:
+                    linear-gradient(rgba(2,8,20,.12), rgba(2,8,20,.12)),
+                    url("./samzy-building.jpg");
                 background-size: 100% 100%, contain;
                 background-position: center center, center top;
             }
@@ -3144,107 +3172,7 @@
 
                 <div class="hero-content reveal">
 
-                    <div class="hero-eyebrow">
-
-                        SOFTWARE ENGINEERING · DIGITAL INNOVATION · TECHNOLOGY
-
-                    </div>
-
-
-                    <h1 class="hero-title">
-
-                        We Build Digital Solutions
-                        <span>That Drive Results.</span>
-
-                    </h1>
-
-
-                    <p class="hero-description">
-
-                        SAMZYTECHNOLOGY LIMITED helps businesses,
-                        organizations and individuals turn ideas
-                        into practical digital solutions through
-                        modern websites, applications, creative
-                        design, printing and technology services.
-
-                    </p>
-
-
-                    <div class="hero-buttons">
-
-                        <a
-                            href="#services"
-                            class="btn btn-primary"
-                        >
-
-                            Explore Our Services
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                        <a
-                            href="https://wa.me/2349042987385?text=Hello%20Samzy%20Technology,%20I%20would%20like%20to%20discuss%20a%20project."
-                            target="_blank"
-                            class="btn btn-outline"
-                        >
-
-                            Talk to Us on WhatsApp
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="hero-stats">
-
-                        <div class="hero-stat">
-
-                            <strong>4+</strong>
-
-                            <span>
-                                Years of Experience
-                            </span>
-
-                        </div>
-
-
-                        <div class="hero-stat">
-
-                            <strong>50+</strong>
-
-                            <span>
-                                Projects Completed
-                            </span>
-
-                        </div>
-
-
-                        <div class="hero-stat">
-
-                            <strong>100%</strong>
-
-                            <span>
-                                Client Focus
-                            </span>
-
-                        </div>
-
-
-                        <div class="hero-stat">
-
-                            <strong>24/7</strong>
-
-                            <span>
-                                Support & Maintenance
-                            </span>
-
-                        </div>
-
-                    </div>
+                    <div class="hero-eyebrow">SAMZYTECHNOLOGY LIMITED</div>
 
                 </div>
 
